@@ -1,0 +1,9 @@
+{
+  "port": 5000,
+  "jwtSecret": "secretKey ...",
+  "mongoUri": "mongodb+srv://mern-starter:mern-starter@cluster0-w7ebf.azure.mongodb.net/app?retryWrites=true&w=majority",
+  "Role": {
+    "Admin": "Admin",
+    "User": "User"
+  }
+}
