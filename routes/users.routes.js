@@ -78,7 +78,10 @@ router.put('/', auth, async (req, res) => {
       { new: true, useFindAndModify: false }
     );
 
-    res.status(201).json({ updateUser });
+    const userObject = { ...updateUser.toObject() };
+    const { password, __v, ...userWithoutPassword } = userObject;
+
+    res.status(201).json({ ...userWithoutPassword });
   } catch (e) {
     res.status(500).json({ message: e });
   }

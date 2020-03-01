@@ -15,7 +15,9 @@ router.post(
       .isEmail(),
     check('password', 'Minimum password length 6 characters').isLength({
       min: 6
-    })
+    }),
+    check('name', 'Enter your Name').notEmpty(),
+    check('surname', 'Enter your Surname').notEmpty()
   ],
   async (req, res) => {
     try {
