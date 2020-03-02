@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Desktop = () => {
+  console.log('Desktop');
   return (
     <div>
       <h1 style={{ textAlign: 'center', padding: '25px' }}>
